@@ -8,5 +8,11 @@ import { Component } from '@angular/core';
   styleUrl: './header.component.scss'
 })
 export class HeaderComponent {
+  openMenu: boolean = false;
 
+
+  toggleMenu() {
+    this.openMenu = !this.openMenu;
+
+  }
 }

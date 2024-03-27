@@ -70,7 +70,7 @@
     </div>
 
     <h2 class="header-flights__title">Economic flights</h2>
-    <div class="header-flights-container">
+    <div class="header-flights-container-mobile">
         <div class="header-flights__input-group">
             <input type="text" class="header-flights__input" placeholder="Origin" >
             <input type="text" class="header-flights__input" placeholder="Destination">
@@ -85,16 +85,16 @@
         </div>
     </div>
 
-    <div class="container-flights-desktop">
-        <div class="prueba-1">
-            <input class="container-flights-desktop__link container-flights-desktop__link--origin" type="text" placeholder="Origin">
-            <input class="container-flights-desktop__link container-flights-desktop__link--destination" type="text" placeholder="Destination">
-            <input class="container-flights-desktop__link container-flights-desktop__link--date"  type="text" placeholder="Date">
-            <input class="container-flights-desktop__link container-flights-desktop__link--passenger"  type="text" placeholder="Passenger">
+    <div class="header-flights-container-desktop">
+        <div class="header-flights-desktop__input-group">
+            <input class="header-flights-desktop__input header-flights-desktop__input--origin" type="text" placeholder="Origin">
+            <input class="header-flights-desktop__input header-flights-desktop__input--destination" type="text" placeholder="Destination">
+            <input class="header-flights-desktop__input header-flights-desktop__input--date"  type="text" placeholder="Date">
+            <input class="header-flights-desktop__input header-flights-desktop__input--passenger"  type="text" placeholder="Passenger">
         </div>
 
-        <div class="prueba">
-            <button class="container-flights-desktop__btn" (click)="onClick()" [class.click-animation]="clickButton">Search</button>
+        <div class="header-flights-desktop__button-container">
+            <button class="header-flights-desktop__button" (click)="onClick()" [class.click-animation]="clickButton">Search</button>
         </div>
 
     </div>

@@ -76,7 +76,7 @@
         text-align: center;
     }
 
-    .header-flights-container{
+    .header-flights-container-mobile{
         max-width: 1200px;
         margin: 0 auto;
         padding: 15px 0;
@@ -189,6 +189,10 @@
     .container{
         display: none;
     }
+
+    .header-flights-container-desktop{
+        display: none;
+    }
 }
 
 
@@ -262,11 +266,11 @@
             margin: 0 0 30px 0;
         }
 
-        .header-flights-container{
+        .header-flights-container-mobile{
             display: none;
         }
 
-        .container-flights-desktop{
+        .header-flights-container-desktop{
             display: flex;
             gap: 15px;
             align-items: center;
@@ -280,7 +284,7 @@
                 gap: 5px;
             }
             
-            .prueba-1{
+            .header-flights-desktop__input-group{
                 display: flex;
                 align-items: center;
                 gap: 15px;
@@ -290,8 +294,8 @@
                     gap: 8px;
                 }
 
-                .container-flights-desktop__link--origin,
-                .container-flights-desktop__link--destination{
+                .header-flights-desktop__input--origin,
+                .header-flights-desktop__input--destination{
                     width: 320px;
                     height: 40px;
                     border-radius: 8px;
@@ -326,18 +330,18 @@
 
                 }
 
-                .container-flights-desktop__link--date,
-                .container-flights-desktop__link--passenger{
+                .header-flights-desktop__input--date,
+                .header-flights-desktop__input--passenger{
                     width: 120px;
-                    @extend .container-flights-desktop__link--origin;
+                    @extend .header-flights-desktop__input--origin;
                 }
             }
 
-            .prueba{
+            .header-flights-desktop__button-container{
                 flex-grow: 1; 
                 display: flex;
                 align-items: center;
-                .container-flights-desktop__btn{
+                .header-flights-desktop__button{
                     padding:15px 40px;
                     background-color: $primary-header-background-color;
                     color: white;

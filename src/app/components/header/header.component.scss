@@ -70,7 +70,7 @@
             padding: 0 20px;
 
             .header-mobile-menu__item{
-                border-bottom: 2px solid white;
+                border-bottom: 2px solid $primary-header-text-color;
                 padding: 28px 5px;
 
                 &:first-child{
@@ -78,11 +78,11 @@
                 }
 
                 &:last-child{
-                    border-bottom: 1px solid white;
+                    border-bottom: 1px solid $primary-header-text-color;
                 }
                 .header-mobile-menu__link{
                     text-decoration: none;
-                    color: white;
+                    color: $primary-header-text-color;
                     font-size: 17px;
                     font-weight: 600;
                 }
@@ -113,7 +113,7 @@
                     gap: 8px;
 
                     .header-desktop__text-language{
-                        color: white;
+                        color: $primary-header-text-color;
                         font-size: 12px;
                     }
                 }
@@ -126,13 +126,13 @@
                         
                         .header-desktop__menu-link{
                             text-decoration: none;
-                            color: white;
+                            color: $primary-header-text-color;
                             font-size: 15px;
                             padding: 5px 10px;
 
 
                             &:hover{
-                                border-bottom: 2px solid white;
+                                border-bottom: 2px solid $primary-header-text-color;
                             }
                         }
                     }
@@ -143,7 +143,7 @@
 
     //Styles for the title of the flight search section on mobile devices
     .header-flights__title{
-        color: white;
+        color: $primary-header-text-color;
         text-align: center;
 
         @media (min-width: 992px){
@@ -157,7 +157,7 @@
         max-width: 1200px;
         margin: 0 auto;
         padding: 15px 0;
-        background-color: white;
+        background-color: $primary-header-text-color;
         border-radius: 15px;
         margin: 0 15px;
 
@@ -196,14 +196,14 @@
                 }
 
                 &:hover{
-                    border: 1px solid #D2DE32;
+                    border: 1px solid $border-color-header-input;
                     
                     cursor: pointer;
                 }
 
                 &:focus{
                     outline: none;
-                    border: 1px solid #D2DE32;
+                    border: 1px solid $border-color-header-input;
                     transition:  0.3s ease;
                     cursor:text;
                     
@@ -230,7 +230,7 @@
             .header-flights__button{
                 padding:15px 40px;
                 background-color: $primary-header-background-color;
-                color: white;
+                color: $primary-header-text-color;
                 border: none;
                 border-radius: 5px;
                 cursor: pointer;
@@ -276,7 +276,7 @@
             display: flex;
             gap: 15px;
             align-items: center;
-            background-color: white;
+            background-color: $primary-header-text-color;
             height: 80px;
             padding: 0 15px;
             margin: 0 60px;
@@ -310,13 +310,13 @@
                     cursor: pointer;
 
                     &:hover{
-                        border: 1px solid #D2DE32;
+                        border: 1px solid $border-color-header-input;
                         cursor: text;
                     }
 
                     &:focus{
                         outline: none;
-                        border: 1px solid #D2DE32;
+                        border: 1px solid $border-color-header-input;
                         transition:  0.3s ease;
                         cursor:text;
                         
@@ -346,7 +346,7 @@
                 .header-flights-desktop__button{
                     padding:15px 40px;
                     background-color: $primary-header-background-color;
-                    color: white;
+                    color: $primary-header-text-color;
                     border: none;
                     border-radius: 5px;
                     cursor: pointer;

@@ -180,13 +180,12 @@
                 transition:  0.3s ease;
 
                 &::placeholder{
-                    color: rgba(93, 91, 91, 0.898);
+                    color: $header-input-placeholder-color;
                     font-weight: 600;
                 }
 
                 &:hover{
                     border: 1px solid $border-color-header-input;
-                    
                     cursor: pointer;
                 }
 
@@ -294,6 +293,11 @@
                     border: 1px solid #2c2b2b7f;
                     transition:  0.3s ease;
                     cursor: pointer;
+
+                    &::placeholder{
+                        color: $header-input-placeholder-color;
+                        font-weight: 600;
+                    }
 
                     &:hover{
                         border: 1px solid $border-color-header-input;

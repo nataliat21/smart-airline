@@ -4,11 +4,29 @@
     background-color: $primary-header-background-color;
     height: 230px;
 
+    @media (min-width: 992px){
+        height: 350px;
+        background: linear-gradient(90deg, rgba(1, 106, 112, 0) 23%, #016A70 70.5%), url('../../../assets/images/main-banner\ \(1\).png');
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    @media (min-width: 1144px){
+        background: linear-gradient(90deg, rgba(1, 106, 112, 0) 23%, #016A70 70%), url('../../../assets/images/main-banner-2.png');
+        background-size: cover;
+        background-position-y: 90%;
+    }
+
+    //Styles for navigation bar icons on mobile devices
     .header-mobile{
         display: flex;
         align-items: center;
         justify-content: space-between;
         padding: 5px 15px;
+
+        @media (min-width: 992px){
+            display: none;
+        }
         
         &.slide-in {
             transform: translateY(-110%);
@@ -19,12 +37,17 @@
         }
     }
 
+    //Styles for the dropdown menu on mobile devices
     .header-mobile-menu{
         position: absolute;
         width: 100%;
         height: 100%; 
         top: 0%;
         @extend .header;
+
+        @media (min-width: 992px){
+            display: none;
+        }
         
         &.slide-in {
             transition: transform 0.6s ease-in-out;
@@ -67,15 +90,69 @@
         }
     }
 
+    //Styles for the navigation bar adapted to desktop devices
     .header-desktop{
         display: none;
+
+        @media (min-width: 992px){
+            
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 55px;
+
+            .header-desktop__links{
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+
+                .header-desktop__language{
+                    display: flex;
+                    justify-content: flex-end;
+                    align-items: center;
+                    gap: 8px;
+
+                    .header-desktop__text-language{
+                        color: white;
+                        font-size: 12px;
+                    }
+                }
+
+                .header-desktop__menu{
+                    display: flex;
+                    gap: 15px;
+
+                    .header-desktop__menu-item{
+                        
+                        .header-desktop__menu-link{
+                            text-decoration: none;
+                            color: white;
+                            font-size: 15px;
+                            padding: 5px 10px;
+
+
+                            &:hover{
+                                border-bottom: 2px solid white;
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
 
+    //Styles for the title of the flight search section on mobile devices
     .header-flights__title{
         color: white;
         text-align: center;
+
+        @media (min-width: 992px){
+            font-size: 29px;
+            margin: 0 0 30px 0;
+        }
     }
 
+    //Styles for the flight search section on mobile devices
     .header-flights-container-mobile{
         max-width: 1200px;
         margin: 0 auto;
@@ -83,6 +160,10 @@
         background-color: white;
         border-radius: 15px;
         margin: 0 15px;
+
+        @media (min-width: 992px){
+            display: none;
+        }
 
         .header-flights__input-group{
             display: flex;
@@ -186,91 +267,12 @@
         }
     }
 
-    .container{
-        display: none;
-    }
-
+    //Styles for the flight search section on desktop devices
     .header-flights-container-desktop{
         display: none;
-    }
-}
 
-
-@media (min-width: 992px){
-    .header{
-        height: 350px;
-        background: linear-gradient(90deg, rgba(1, 106, 112, 0) 23%, #016A70 70.5%), url('../../../assets/images/main-banner\ \(1\).png');
-        background-size: cover;
-        background-repeat: no-repeat;
-
-        @media (min-width: 1144px){
-            background: linear-gradient(90deg, rgba(1, 106, 112, 0) 23%, #016A70 70%), url('../../../assets/images/main-banner-2.png');
-            background-size: cover;
-            background-position-y: 90%;
-        }
-
-        .header-mobile,
-        .header-mobile-menu{
-            display: none;
-        }
-
-        .header-desktop{
+        @media (min-width: 992px){
             
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 0 55px;
-
-            .header-desktop__links{
-                display: flex;
-                flex-direction: column;
-                gap: 20px;
-
-                .header-desktop__language{
-                    display: flex;
-                    justify-content: flex-end;
-                    align-items: center;
-                    gap: 8px;
-
-                    .header-desktop__text-language{
-                        color: white;
-                        font-size: 12px;
-                    }
-                }
-
-                .header-desktop__menu{
-                    display: flex;
-                    gap: 15px;
-
-                    .header-desktop__menu-item{
-                        
-                        .header-desktop__menu-link{
-                            text-decoration: none;
-                            color: white;
-                            font-size: 15px;
-                            padding: 5px 10px;
-
-
-                            &:hover{
-                                border-bottom: 2px solid white;
-                            }
-                        }
-                    }
-                }
-            }
-
-        }
-
-        .header-flights__title{
-            font-size: 29px;
-            margin: 0 0 30px 0;
-        }
-
-        .header-flights-container-mobile{
-            display: none;
-        }
-
-        .header-flights-container-desktop{
             display: flex;
             gap: 15px;
             align-items: center;
@@ -386,10 +388,9 @@
 
                 }
             }
-        }
         
-
-
+        }
     }
 }
+
 

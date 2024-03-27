@@ -1,5 +1,10 @@
+<!-- This component includes the entire part of the header adapted to mobile and desktop devices,
+here you can find: the links in the navigation bar, the website icon, and a flight search section,
+in addition to some menu display functionalities -->
+
 <header class="header">
     
+    <!--This section contains only the navigation bar icons on mobile devices-->
     <div class="header-mobile  slide-in"  [class.show]="!openMenu">
         <svg class="header-mobile__icon" width="42" height="42" viewBox="0 0 97 105" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M44.1818 46.0796C43.4416 50.7114 43.8016 53.9534 43.9351 59L77 10L20 33.1592C24.3429 33.9393 33.8182 34.4594 38.013 34.6219C43.7377 34.4269 51.0909 29.99 54.0519 27.796H49.3636L62.6883 21.2139L55.039 32.6716L54.5455 29.7463L54.2987 31.4527L53.0649 31.9403C53.4597 31.7453 53.8874 29.4212 54.0519 28.2836C50.1039 30.6239 44.9221 41.4478 44.1818 46.0796Z" fill="#D2DE32"/>
@@ -11,6 +16,7 @@
         </svg>
     </div>
     
+    <!-- This section contains the menu that is displayed when you click on the hamburger menu icon -->
     <div class="header-mobile-menu slide-in" [class.show]="openMenu">
         <div class="header-mobile-menu__icons" >
             <svg class="header-mobile-menu__icon" width="42" height="42" viewBox="0 0 97 105" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -40,6 +46,7 @@
 
     </div>
 
+    <!-- This section contains the navigation bar adapted to desktop devices -->
     <div class="header-desktop">
         <div class="header-desktop__logo">
             <svg  class="header-desktop__icon" width="97" height="105" viewBox="0 0 97 105" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -69,6 +76,7 @@
         </div>
     </div>
 
+    <!-- This section is the flight search section on mobile devices -->
     <h2 class="header-flights__title">Economic flights</h2>
     <div class="header-flights-container-mobile">
         <div class="header-flights__input-group">
@@ -85,6 +93,7 @@
         </div>
     </div>
 
+    <!-- This section is the flight search section on desktop devices -->
     <div class="header-flights-container-desktop">
         <div class="header-flights-desktop__input-group">
             <input class="header-flights-desktop__input header-flights-desktop__input--origin" type="text" placeholder="Origin">
@@ -100,8 +109,5 @@
     </div>
     
 
-    
 
-
-    
 </header>

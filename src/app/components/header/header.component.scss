@@ -19,9 +19,7 @@
 
     //Styles for navigation bar icons on mobile devices
     .header-mobile{
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
+        @include set-flex-align-and-justify-content(center, space-between);
         padding: 5px 15px;
 
         @media (min-width: 992px){
@@ -63,9 +61,7 @@
         }
 
         .header-mobile-menu-links{
-            
-            display: flex;
-            flex-direction: column;
+            @include set-flex-direction(column);
             text-align: center;
             padding: 0 20px;
 
@@ -95,21 +91,15 @@
         display: none;
 
         @media (min-width: 992px){
-            
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
+            @include set-flex-align-and-justify-content(center, space-between);
             padding: 0 55px;
 
             .header-desktop__links{
-                display: flex;
-                flex-direction: column;
+                @include set-flex-direction(column);
                 gap: 20px;
 
                 .header-desktop__language{
-                    display: flex;
-                    justify-content: flex-end;
-                    align-items: center;
+                    @include set-flex-align-and-justify-content(center, flex-end);
                     gap: 8px;
 
                     .header-desktop__text-language{
@@ -172,9 +162,8 @@
             justify-content: center;
 
             @media (max-width:320px){
-                flex-direction: column;
-                align-items: center;
-                justify-content: center;
+                @include set-flex-direction(column);
+                @include set-flex-align-and-justify-content(center, center);
                 gap: 0px;
                 width: 100%;
             }
@@ -272,10 +261,8 @@
         display: none;
 
         @media (min-width: 992px){
-            
-            display: flex;
+            @include flex-align(center);
             gap: 15px;
-            align-items: center;
             background-color: $primary-header-text-color;
             height: 80px;
             padding: 0 15px;
@@ -287,8 +274,7 @@
             }
             
             .header-flights-desktop__input-group{
-                display: flex;
-                align-items: center;
+                @include flex-align(center);
                 gap: 15px;
                 width: calc(100% - 120px); 
 
@@ -341,8 +327,7 @@
 
             .header-flights-desktop__button-container{
                 flex-grow: 1; 
-                display: flex;
-                align-items: center;
+                @include flex-align(center);
                 .header-flights-desktop__button{
                     padding:15px 40px;
                     background-color: $primary-header-background-color;

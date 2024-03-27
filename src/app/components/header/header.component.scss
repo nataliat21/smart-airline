@@ -1,0 +1,381 @@
+@import '../../../styles.scss';
+
+.header{
+    background-color: $primary-header-background-color;
+    height: 230px;
+
+    @media (min-width: 992px){
+        height: 350px;
+        background: linear-gradient(90deg, rgba(1, 106, 112, 0) 23%, #016A70 70.5%), url('../../../assets/images/main-banner\ \(1\).png');
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    @media (min-width: 1144px){
+        background: linear-gradient(90deg, rgba(1, 106, 112, 0) 23%, #016A70 70%), url('../../../assets/images/main-banner-2.png');
+        background-size: cover;
+        background-position-y: 90%;
+    }
+
+    //Styles for navigation bar icons on mobile devices
+    .header-mobile{
+        @include set-flex-align-and-justify-content(center, space-between);
+        padding: 5px 15px;
+
+        @media (min-width: 992px){
+            display: none;
+        }
+        
+        &.slide-in {
+            transform: translateY(-110%);
+        }
+
+        &.slide-in.show {
+            transform: translateY(0);
+        }
+    }
+
+    //Styles for the dropdown menu on mobile devices
+    .header-mobile-menu{
+        position: absolute;
+        width: 100%;
+        height: 100%; 
+        top: 0%;
+        @extend .header;
+
+        @media (min-width: 992px){
+            display: none;
+        }
+        
+        &.slide-in {
+            transition: transform 0.6s ease-in-out;
+            transform: translateY(-110%);
+        }
+
+        &.slide-in.show {
+            transform: translateY(0);
+        }
+
+        .header-mobile-menu__icons{
+            @extend .header-mobile;
+        }
+
+        .header-mobile-menu-links{
+            @include set-flex-direction(column);
+            text-align: center;
+            padding: 0 20px;
+
+            .header-mobile-menu__item{
+                border-bottom: 2px solid $primary-header-text-color;
+                padding: 28px 5px;
+
+                &:first-child{
+                    padding-top: 20px;
+                }
+
+                &:last-child{
+                    border-bottom: 1px solid $primary-header-text-color;
+                }
+                .header-mobile-menu__link{
+                    text-decoration: none;
+                    color: $primary-header-text-color;
+                    font-size: 17px;
+                    font-weight: 600;
+                }
+            }
+        }
+    }
+
+    //Styles for the navigation bar adapted to desktop devices
+    .header-desktop{
+        display: none;
+
+        @media (min-width: 992px){
+            @include set-flex-align-and-justify-content(center, space-between);
+            padding: 0 55px;
+
+            .header-desktop__links{
+                @include set-flex-direction(column);
+                gap: 20px;
+
+                .header-desktop__language{
+                    @include set-flex-align-and-justify-content(center, flex-end);
+                    gap: 8px;
+
+                    .header-desktop__text-language{
+                        color: $primary-header-text-color;
+                        font-size: 12px;
+                    }
+                }
+
+                .header-desktop__menu{
+                    display: flex;
+                    gap: 15px;
+
+                    .header-desktop__menu-item{
+                        
+                        .header-desktop__menu-link{
+                            text-decoration: none;
+                            color: $primary-header-text-color;
+                            font-size: 15px;
+                            padding: 5px 10px;
+
+
+                            &:hover{
+                                border-bottom: 2px solid $primary-header-text-color;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    //Styles for the title of the flight search section on mobile devices
+    .header-flights__title{
+        color: $primary-header-text-color;
+        text-align: center;
+
+        @media (min-width: 992px){
+            font-size: 29px;
+            margin: 0 0 30px 0;
+        }
+    }
+
+    //Styles for the flight search section on mobile devices
+    .header-flights-container-mobile{
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 15px 0;
+        background-color: $primary-header-text-color;
+        border-radius: 15px;
+        margin: 0 15px;
+
+        @media (min-width: 992px){
+            display: none;
+        }
+
+        .header-flights__input-group{
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+
+            @media (max-width:320px){
+                @include set-flex-direction(column);
+                @include set-flex-align-and-justify-content(center, center);
+                gap: 0px;
+                width: 100%;
+            }
+
+            .header-flights__input{
+                width: calc(50% - #{10px * 2});
+                height: 45px;
+                padding: 10px;
+                margin-bottom: 15px;
+                border: 1px solid #2c2b2b7f;
+                border-radius: 8px;
+                box-sizing: border-box;
+                font-family: 'Inter', sans-serif;
+                transition:  0.3s ease;
+
+                &::placeholder{
+                    color: rgba(93, 91, 91, 0.898);
+                    font-weight: 600;
+                }
+
+                &:hover{
+                    border: 1px solid $border-color-header-input;
+                    
+                    cursor: pointer;
+                }
+
+                &:focus{
+                    outline: none;
+                    border: 1px solid $border-color-header-input;
+                    transition:  0.3s ease;
+                    cursor:text;
+                    
+                    &::-webkit-input-placeholder{
+                        opacity: 0; 
+                        transition: opacity 0.8s ease; 
+                    }
+                    &::-moz-placeholder {
+                        opacity: 0; 
+                        transition: opacity 0.8s ease; 
+                    }
+                }
+
+                @media (max-width:320px){
+                    width: calc(100% - #{15px * 2});
+                }
+            }
+        }
+
+        .header-flights__button-container{
+            width: 100%;
+            text-align: center; 
+
+            .header-flights__button{
+                padding:15px 40px;
+                background-color: $primary-header-background-color;
+                color: $primary-header-text-color;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+                margin-bottom: 5px;
+                font-family: 'Inter', sans-serif;
+                font-weight: 600;
+                border-radius: 30px;
+                font-size: 14px;
+                
+                &:hover{
+                    background-color: #013D40;
+                    transition: background-color 0.5s ease; 
+                }
+
+                &:hover:hover{
+                    background-color: #06383b;
+                }
+
+                &.click-animation {
+                    animation: bounce 0.7s  ease; 
+                }
+
+                
+                @keyframes bounce {
+                    0%, 100% {
+                        transform: scaleX(1);
+                    }
+                    50% {
+                        transform: scaleX(0.7); 
+                        background-color: #042122;
+                    }
+                }
+            }
+        }
+    }
+
+    //Styles for the flight search section on desktop devices
+    .header-flights-container-desktop{
+        display: none;
+
+        @media (min-width: 992px){
+            @include flex-align(center);
+            gap: 15px;
+            background-color: $primary-header-text-color;
+            height: 80px;
+            padding: 0 15px;
+            margin: 0 60px;
+            border-radius: 15px;
+
+            @media (min-width: 1201px) and (max-width: 1440px){
+                gap: 5px;
+            }
+            
+            .header-flights-desktop__input-group{
+                @include flex-align(center);
+                gap: 15px;
+                width: calc(100% - 120px); 
+
+                @media (min-width: 992px) and (max-width: 1024px){
+                    gap: 8px;
+                }
+
+                .header-flights-desktop__input--origin,
+                .header-flights-desktop__input--destination{
+                    width: 320px;
+                    height: 40px;
+                    border-radius: 8px;
+                    padding: 0 0 0 10px;
+                    font-family: 'Inter', sans-serif;
+                    font-weight: 600;
+                    font-size: 14px;
+                    border: 1px solid #2c2b2b7f;
+                    transition:  0.3s ease;
+                    cursor: pointer;
+
+                    &:hover{
+                        border: 1px solid $border-color-header-input;
+                        cursor: text;
+                    }
+
+                    &:focus{
+                        outline: none;
+                        border: 1px solid $border-color-header-input;
+                        transition:  0.3s ease;
+                        cursor:text;
+                        
+                        &::-webkit-input-placeholder{
+                            opacity: 0; 
+                            transition: opacity 0.8s ease; 
+                        }
+                        &::-moz-placeholder {
+                            opacity: 0; 
+                            transition: opacity 0.8s ease; 
+                        }
+                    }
+
+                }
+
+                .header-flights-desktop__input--date,
+                .header-flights-desktop__input--passenger{
+                    width: 120px;
+                    @extend .header-flights-desktop__input--origin;
+                }
+            }
+
+            .header-flights-desktop__button-container{
+                flex-grow: 1; 
+                @include flex-align(center);
+                .header-flights-desktop__button{
+                    padding:15px 40px;
+                    background-color: $primary-header-background-color;
+                    color: $primary-header-text-color;
+                    border: none;
+                    border-radius: 5px;
+                    cursor: pointer;
+                    font-family: 'Inter', sans-serif;
+                    font-weight: 600;
+                    border-radius: 30px;
+                    font-size: 14px;
+
+                    
+                    @media (min-width: 992px) and (max-width: 1200px){
+                        padding:15px 35px;
+                    }
+
+
+                    &:hover{
+                        background-color: #013D40;
+                        transition: background-color 0.5s ease; 
+                    }
+    
+                    &:hover:hover{
+                        background-color: #06383b;
+                    }
+    
+                    &.click-animation {
+                        animation: bounce-left 0.9s  ease; 
+                    }
+    
+                    
+                    @keyframes bounce-left {
+                        0%, 100% {
+                            transform: scaleX(1);
+                        }
+                        50% {
+                            transform: scaleX(0.8); 
+                            background-color: #042122;
+                            transform-origin: left;
+                        }
+                    }
+
+                }
+            }
+        
+        }
+    }
+}
+
+

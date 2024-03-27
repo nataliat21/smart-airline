@@ -1,0 +1,18 @@
+//Mixin to set flex align and justification
+@mixin set-flex-align-and-justify-content($align, $justify-content){
+    display: flex;
+    align-items: $align;
+    justify-content: $justify-content;
+}
+
+//Mixin to set flex direction
+@mixin set-flex-direction($flex-direction){
+    display: flex;
+    flex-direction: $flex-direction;
+}
+
+//Mixin that applies the flexbox property and modifies the value of the align property 
+@mixin flex-align($align){
+    display: flex;
+    align-items: $align;
+}

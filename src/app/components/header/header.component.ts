@@ -10,9 +10,16 @@ import { Component } from '@angular/core';
 export class HeaderComponent {
   openMenu: boolean = false;
 
-
   toggleMenu() {
     this.openMenu = !this.openMenu;
+  }
 
+  clickButton: boolean = false;
+
+  onClick(): void {
+    this.clickButton = true;
+    setTimeout(() => {
+      this.clickButton = false;
+    }, 700);
   }
 }

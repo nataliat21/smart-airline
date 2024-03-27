@@ -40,7 +40,6 @@
 
     </div>
 
-    
     <div class="header-desktop">
         <div class="header-desktop__logo">
             <svg  class="header-desktop__icon" width="97" height="105" viewBox="0 0 97 105" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -69,6 +68,25 @@
             </div>
         </div>
     </div>
+
+    <h2 class="header-flights__title">Economic flights</h2>
+    <div class="header-flights-container">
+        <div class="header-flights__input-group">
+            <input type="text" class="header-flights__input" placeholder="Origin" >
+            <input type="text" class="header-flights__input" placeholder="Destination">
+        </div>
+        <div class="header-flights__input-group">
+            <input type="text" class="header-flights__input" placeholder="Date">
+            <input type="text" class="header-flights__input" placeholder="Passenger">
+        </div>
+
+        <div class="header-flights__button-container">
+            <button class="header-flights__button" (click)="onClick()" [class.click-animation]="clickButton">Search</button>
+        </div>
+    </div>
+
+    
+
 
     
 </header>

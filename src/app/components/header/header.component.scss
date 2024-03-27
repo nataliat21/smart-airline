@@ -2,6 +2,8 @@
 
 .header{
     background-color: $primary-header-background-color;
+    height: 230px;
+
     .header-mobile{
         display: flex;
         align-items: center;
@@ -25,10 +27,9 @@
         @extend .header;
         
         &.slide-in {
-            transition: transform 0.5s ease-in-out;
+            transition: transform 0.6s ease-in-out;
             transform: translateY(-110%);
         }
-
 
         &.slide-in.show {
             transform: translateY(0);
@@ -69,13 +70,129 @@
     .header-desktop{
         display: none;
     }
+
+    .header-flights__title{
+        color: white;
+        text-align: center;
+    }
+
+    .header-flights-container{
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 15px 0;
+        background-color: white;
+        border-radius: 15px;
+        margin: 0 15px;
+
+        .header-flights__input-group{
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+
+            @media (max-width:320px){
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                gap: 0px;
+                width: 100%;
+            }
+
+            .header-flights__input{
+                width: calc(50% - #{10px * 2});
+                height: 45px;
+                padding: 10px;
+                margin-bottom: 15px;
+                border: 1px solid #2c2b2b7f;
+                border-radius: 8px;
+                box-sizing: border-box;
+                font-family: 'Inter', sans-serif;
+                transition:  0.3s ease;
+
+                &::placeholder{
+                    color: rgba(93, 91, 91, 0.898);
+                    font-weight: 600;
+                }
+
+                &:hover{
+                    border: 1px solid #D2DE32;
+                    
+                    cursor: pointer;
+                }
+
+                &:focus{
+                    outline: none;
+                    border: 1px solid #D2DE32;
+                    transition:  0.3s ease;
+                    cursor:text;
+                    
+                    &::-webkit-input-placeholder{
+                        opacity: 0; 
+                        transition: opacity 0.8s ease; 
+                    }
+                    &::-moz-placeholder {
+                        opacity: 0; 
+                        transition: opacity 0.8s ease; 
+                    }
+                }
+
+                @media (max-width:320px){
+                    width: calc(100% - #{15px * 2});
+                }
+            }
+        }
+
+        .header-flights__button-container{
+            width: 100%;
+            text-align: center; 
+
+            .header-flights__button{
+                padding:15px 40px;
+                background-color: $primary-header-background-color;
+                color: white;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+                margin-bottom: 5px;
+                font-family: 'Inter', sans-serif;
+                font-weight: 600;
+                border-radius: 30px;
+                font-size: 14px;
+                
+                &:hover{
+                    background-color: #013D40;
+                    transition: background-color 0.5s ease; 
+                }
+
+                &:hover:hover{
+                    background-color: #06383b;
+                }
+
+                &.click-animation {
+                    animation: bounce 0.7s  ease; 
+                }
+
+                
+                @keyframes bounce {
+                    0%, 100% {
+                        transform: scaleX(1);
+                    }
+                    50% {
+                        transform: scaleX(0.7); 
+                        background-color: #042122;
+                    }
+                }
+            }
+        }
+    }
 }
+
 
 @media (min-width: 992px){
     .header{
-
-        background-image: linear-gradient(to right, transparent, #2D8186, #056A70), url('../../../assets/images/main-banner.svg');
-        background-size: cover;
+        background: linear-gradient(90deg, rgba(1, 106, 112, 0) 23%, #016A70 70.5%), url('../../../assets/images/beach\ 1\ \(3\).png');
+        background-size: contain;
+        background-repeat: no-repeat;
 
         .header-mobile,
         .header-mobile-menu{
@@ -98,7 +215,7 @@
                     display: flex;
                     justify-content: flex-end;
                     align-items: center;
-                    gap: 5px;
+                    gap: 8px;
 
                     .header-desktop__text-language{
                         color: white;
@@ -108,15 +225,16 @@
 
                 .header-desktop__menu{
                     display: flex;
-                    gap: 40px;
+                    gap: 15px;
 
                     .header-desktop__menu-item{
                         
                         .header-desktop__menu-link{
                             text-decoration: none;
                             color: white;
-                            font-size: 16px;
-                            padding-bottom: 5px;
+                            font-size: 15px;
+                            padding: 5px 10px;
+
 
                             &:hover{
                                 border-bottom: 2px solid white;
@@ -128,5 +246,14 @@
 
         }
 
+        .header-flights__title{
+            font-size: 28px;
+            margin: 0 0 30px 0;
+        }
+
+        .header-flights-container{
+            display: none;
+        }
     }
 }
+

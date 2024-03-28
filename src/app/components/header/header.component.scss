@@ -55,7 +55,7 @@
             transform: translateY(0);
         }
 
-        .header-mobile-menu__icons{
+        .header-mobile-menu-icons{
             @extend .header-mobile;
         }
 
@@ -64,7 +64,7 @@
             text-align: center;
             padding: 0 20px;
 
-            .header-mobile-menu__item{
+            .header-mobile-menu-links-item{
                 border-bottom: 2px solid $primary-header-text-color;
                 padding: 28px 5px;
 
@@ -75,7 +75,7 @@
                 &:last-child{
                     border-bottom: 1px solid $primary-header-text-color;
                 }
-                .header-mobile-menu__link{
+                .header-mobile-menu-links-item__link{
                     text-decoration: none;
                     color: $primary-header-text-color;
                     @include set-font-weight-and-font-size(600,17px);
@@ -92,15 +92,15 @@
             @include set-flex-align-and-justify-content(center, space-between);
             padding: 0 55px;
 
-            .header-desktop__links{
+            .header-desktop-links{
                 @include set-flex-direction(column);
                 gap: 20px;
 
-                .header-desktop__language{
+                .header-desktop-links-language{
                     @include set-flex-align-and-justify-content(center, flex-end);
                     gap: 8px;
 
-                    .header-desktop__text-language{
+                    .header-desktop-links-language__text{
                         color: $primary-header-text-color;
                         font-size: 12px;
 
@@ -111,13 +111,13 @@
                     }
                 }
 
-                .header-desktop__menu{
+                .header-desktop-links-menu{
                     display: flex;
                     gap: 15px;
 
-                    .header-desktop__menu-item{
+                    .header-desktop-links-menu-item{
                         
-                        .header-desktop__menu-link{
+                        .header-desktop-links-menu-item__link{
                             text-decoration: none;
                             color: $primary-header-text-color;
                             font-size: 15px;
@@ -160,7 +160,7 @@
             display: none;
         }
 
-        .header-flights__input-group{
+        .header-flights-container-mobile-group{
             display: flex;
             flex-wrap: wrap;
             gap: 10px;
@@ -173,7 +173,7 @@
                 width: 100%;
             }
 
-            .header-flights__input{
+            .header-flights-container-mobile-group__input{
                 @include set-width-and-height(calc(50% - #{10px * 2}), 45px);
                 padding: 10px;
                 margin-bottom: 15px;
@@ -215,11 +215,11 @@
             }
         }
 
-        .header-flights__button-container{
+        .header-flights-container-mobile-button{
             width: 100%;
             text-align: center; 
 
-            .header-flights__button{
+            .header-flights-container-mobile-button__btn{
                 @include set-padding-background-color-color-and-border(10px 40px, $primary-header-background-color,$primary-header-text-color, none);
                 @include set-cursor-font-weight-font-size-and-border-radius(pointer,600,14px,30px);
                 margin-bottom: 5px;
@@ -269,7 +269,7 @@
                 gap: 5px;
             }
             
-            .header-flights-desktop__input-group{
+            .header-flights-container-desktop-group{
                 @include flex-align(center);
                 gap: 15px;
                 width: calc(100% - 120px); 
@@ -278,8 +278,8 @@
                     gap: 8px;
                 }
 
-                .header-flights-desktop__input--origin,
-                .header-flights-desktop__input--destination{
+                .header-flights-container-desktop-group__input--origin,
+                .header-flights-container-desktop-group__input--destination{
                     @include set-width-and-height(320px, 40px);
                     @include set-font-weight-and-font-size(600,14px);
                     border-radius: 8px;
@@ -317,17 +317,18 @@
 
                 }
 
-                .header-flights-desktop__input--date,
-                .header-flights-desktop__input--passenger{
+                .header-flights-container-desktop-group__input--date,
+                .header-flights-container-desktop-group__input--passenger{
                     width: 120px;
-                    @extend .header-flights-desktop__input--origin;
+                    @extend .header-flights-container-desktop-group__input--origin;
                 }
             }
 
-            .header-flights-desktop__button-container{
+            .header-flights-container-desktop-button{
                 flex-grow: 1; 
                 @include flex-align(center);
-                .header-flights-desktop__button{
+
+                .header-flights-container-desktop-button__btn{
                     @include set-padding-background-color-color-and-border(15px 40px, $primary-header-background-color, $primary-header-text-color, none);
                     @include set-cursor-font-weight-font-size-and-border-radius(pointer,600,14px,30px);
                     font-family: 'Inter', sans-serif;

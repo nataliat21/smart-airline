@@ -18,59 +18,59 @@ in addition to some menu display functionalities -->
     
     <!-- This section contains the menu that is displayed when you click on the hamburger menu icon -->
     <div class="header-mobile-menu slide-in" [class.show]="openMenu">
-        <div class="header-mobile-menu__icons" >
-            <svg class="header-mobile-menu__icon" width="42" height="42" viewBox="0 0 97 105" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <div class="header-mobile-menu-icons" >
+            <svg class="header-mobile-menu-icons__icon" width="42" height="42" viewBox="0 0 97 105" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M44.1818 46.0796C43.4416 50.7114 43.8016 53.9534 43.9351 59L77 10L20 33.1592C24.3429 33.9393 33.8182 34.4594 38.013 34.6219C43.7377 34.4269 51.0909 29.99 54.0519 27.796H49.3636L62.6883 21.2139L55.039 32.6716L54.5455 29.7463L54.2987 31.4527L53.0649 31.9403C53.4597 31.7453 53.8874 29.4212 54.0519 28.2836C50.1039 30.6239 44.9221 41.4478 44.1818 46.0796Z" fill="#D2DE32"/>
                 <path d="M7.41 89.3C6.21 89.3 5.02 89.09 3.84 88.67C2.66 88.25 1.81 87.78 1.29 87.26L2.88 84.41C3.3 84.79 3.95 85.19 4.83 85.61C5.73 86.01 6.59 86.21 7.41 86.21C8.47 86.21 9.33 85.96 9.99 85.46C10.67 84.96 11.01 84.27 11.01 83.39C11.01 82.71 10.83 82.12 10.47 81.62C10.11 81.12 9.67 80.71 9.15 80.39C8.63 80.05 7.89 79.64 6.93 79.16C5.79 78.6 5.01 78.18 4.59 77.9C2.65 76.6 1.68 74.8 1.68 72.5C1.68 70.6 2.31 69.15 3.57 68.15C4.83 67.13 6.42 66.62 8.34 66.62C10.4 66.62 12.15 67.21 13.59 68.39L12 71.12C11.62 70.72 11.08 70.38 10.38 70.1C9.7 69.8 8.97 69.65 8.19 69.65C7.19 69.65 6.4 69.88 5.82 70.34C5.26 70.78 4.98 71.44 4.98 72.32C4.98 72.94 5.16 73.5 5.52 74C5.88 74.48 6.33 74.9 6.87 75.26C7.43 75.62 8.18 76.06 9.12 76.58C10.02 77.08 10.71 77.48 11.19 77.78C11.67 78.06 12.12 78.4 12.54 78.8C13.12 79.32 13.59 79.94 13.95 80.66C14.31 81.38 14.49 82.17 14.49 83.03C14.49 84.37 14.18 85.51 13.56 86.45C12.96 87.39 12.12 88.1 11.04 88.58C9.98 89.06 8.77 89.3 7.41 89.3ZM23.7717 78.71L22.3917 75.59L21.7617 78.71L19.7217 89H16.3917L20.9517 66.95H21.3117L27.3717 78.86L29.1717 82.85L30.9717 78.86L36.9117 66.95H37.2417L41.9817 89H38.6817L36.4617 78.71L35.8017 75.59L34.6017 78.71L29.2617 89H29.0817L23.7717 78.71ZM53.0077 66.92L63.6277 89H59.7577L57.8677 84.68H47.7577L45.8677 89H42.1177L52.6777 66.92H53.0077ZM51.5077 76.31L49.1077 81.65H56.5477L54.1777 76.34L52.8877 73.31H52.8277L51.5077 76.31ZM76.4848 89L72.0448 80.66C71.1248 80.7 70.3048 80.72 69.5848 80.72H68.7448V89H65.4748V66.95H70.4848C73.0248 66.95 75.1148 67.48 76.7548 68.54C78.3948 69.58 79.2148 71.28 79.2148 73.64C79.2148 75.12 78.8648 76.4 78.1648 77.48C77.4848 78.54 76.4648 79.36 75.1048 79.94L80.3548 89H76.4848ZM70.8748 77.99C72.8348 77.99 74.1748 77.57 74.8948 76.73C75.6348 75.87 76.0048 74.85 76.0048 73.67C76.0048 71.05 74.2548 69.74 70.7548 69.74H68.7448V77.99H70.8748ZM86.7841 69.89H81.1441V66.95H95.8141V69.89H90.1141V89H86.7841V69.89Z" fill="#D2DE32"/>
             </svg>
     
-            <svg class="header-mobile-menu__icon" (click)=" toggleMenu()"width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg class="header-mobile-menu-icons__icon" (click)=" toggleMenu()"width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M5.20589 21L4 19.6154L10.6324 12L4 4.38462L5.20589 3L11.8383 10.6154L18.4707 3L19.6766 4.38462L13.0442 12L19.6766 19.6154L18.4707 21L11.8383 13.3846L5.20589 21Z" fill="white"/>
             </svg>
         </div>
 
         <div class="header-mobile-menu-links">
 
-            <div class="header-mobile-menu__item">
-                <a class="header-mobile-menu__link" href="#">Information</a>
+            <div class="header-mobile-menu-links-item">
+                <a class="header-mobile-menu-links-item__link" href="#">Information</a>
             </div>
     
-            <div class="header-mobile-menu__item">
-                <a class="header-mobile-menu__link" href="#">Check-in</a>
+            <div class="header-mobile-menu-links-item">
+                <a class="header-mobile-menu-links-item__link" href="#">Check-in</a>
             </div>
-            <div class="header-mobile-menu__item">
-                <a class="header-mobile-menu__link"  href="#">Manage my booking</a>
+            <div class="header-mobile-menu-links-item">
+                <a class="header-mobile-menu-links-item__link"  href="#">Manage my booking</a>
             </div>
         </div>
-
 
     </div>
 
     <!-- This section contains the navigation bar adapted to desktop devices -->
     <div class="header-desktop">
-        <div class="header-desktop__logo">
-            <svg  class="header-desktop__icon" width="97" height="105" viewBox="0 0 97 105" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <div class="header-desktop-logo">
+            <svg  class="header-desktop-logo__icon" width="97" height="105" viewBox="0 0 97 105" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M44.1818 46.0796C43.4416 50.7114 43.8016 53.9534 43.9351 59L77 10L20 33.1592C24.3429 33.9393 33.8182 34.4594 38.013 34.6219C43.7377 34.4269 51.0909 29.99 54.0519 27.796H49.3636L62.6883 21.2139L55.039 32.6716L54.5455 29.7463L54.2987 31.4527L53.0649 31.9403C53.4597 31.7453 53.8874 29.4212 54.0519 28.2836C50.1039 30.6239 44.9221 41.4478 44.1818 46.0796Z" fill="#D2DE32"/>
                 <path d="M7.41 89.3C6.21 89.3 5.02 89.09 3.84 88.67C2.66 88.25 1.81 87.78 1.29 87.26L2.88 84.41C3.3 84.79 3.95 85.19 4.83 85.61C5.73 86.01 6.59 86.21 7.41 86.21C8.47 86.21 9.33 85.96 9.99 85.46C10.67 84.96 11.01 84.27 11.01 83.39C11.01 82.71 10.83 82.12 10.47 81.62C10.11 81.12 9.67 80.71 9.15 80.39C8.63 80.05 7.89 79.64 6.93 79.16C5.79 78.6 5.01 78.18 4.59 77.9C2.65 76.6 1.68 74.8 1.68 72.5C1.68 70.6 2.31 69.15 3.57 68.15C4.83 67.13 6.42 66.62 8.34 66.62C10.4 66.62 12.15 67.21 13.59 68.39L12 71.12C11.62 70.72 11.08 70.38 10.38 70.1C9.7 69.8 8.97 69.65 8.19 69.65C7.19 69.65 6.4 69.88 5.82 70.34C5.26 70.78 4.98 71.44 4.98 72.32C4.98 72.94 5.16 73.5 5.52 74C5.88 74.48 6.33 74.9 6.87 75.26C7.43 75.62 8.18 76.06 9.12 76.58C10.02 77.08 10.71 77.48 11.19 77.78C11.67 78.06 12.12 78.4 12.54 78.8C13.12 79.32 13.59 79.94 13.95 80.66C14.31 81.38 14.49 82.17 14.49 83.03C14.49 84.37 14.18 85.51 13.56 86.45C12.96 87.39 12.12 88.1 11.04 88.58C9.98 89.06 8.77 89.3 7.41 89.3ZM23.7717 78.71L22.3917 75.59L21.7617 78.71L19.7217 89H16.3917L20.9517 66.95H21.3117L27.3717 78.86L29.1717 82.85L30.9717 78.86L36.9117 66.95H37.2417L41.9817 89H38.6817L36.4617 78.71L35.8017 75.59L34.6017 78.71L29.2617 89H29.0817L23.7717 78.71ZM53.0077 66.92L63.6277 89H59.7577L57.8677 84.68H47.7577L45.8677 89H42.1177L52.6777 66.92H53.0077ZM51.5077 76.31L49.1077 81.65H56.5477L54.1777 76.34L52.8877 73.31H52.8277L51.5077 76.31ZM76.4848 89L72.0448 80.66C71.1248 80.7 70.3048 80.72 69.5848 80.72H68.7448V89H65.4748V66.95H70.4848C73.0248 66.95 75.1148 67.48 76.7548 68.54C78.3948 69.58 79.2148 71.28 79.2148 73.64C79.2148 75.12 78.8648 76.4 78.1648 77.48C77.4848 78.54 76.4648 79.36 75.1048 79.94L80.3548 89H76.4848ZM70.8748 77.99C72.8348 77.99 74.1748 77.57 74.8948 76.73C75.6348 75.87 76.0048 74.85 76.0048 73.67C76.0048 71.05 74.2548 69.74 70.7548 69.74H68.7448V77.99H70.8748ZM86.7841 69.89H81.1441V66.95H95.8141V69.89H90.1141V89H86.7841V69.89Z" fill="#D2DE32"/>
             </svg>
         </div>
 
-        <div class="header-desktop__links">
-            <div class="header-desktop__language">
-                <svg class="header-desktop__icon-language"  width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <div class="header-desktop-links">
+            <div class="header-desktop-links-language">
+                <svg class="header-desktop-links-language__icon"  width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M9 16.5C7.95 16.5 6.96875 16.3031 6.05625 15.9094C5.14375 15.5156 4.35 14.9812 3.675 14.3062C3 13.6312 2.46875 12.8344 2.08125 11.9156C1.69375 10.9969 1.5 10.0125 1.5 8.9625C1.5 7.9125 1.69375 6.93437 2.08125 6.02812C2.46875 5.12187 3 4.33125 3.675 3.65625C4.35 2.98125 5.14375 2.45312 6.05625 2.07187C6.96875 1.69062 7.95 1.5 9 1.5C10.05 1.5 11.0312 1.69062 11.9437 2.07187C12.8562 2.45312 13.65 2.98125 14.325 3.65625C15 4.33125 15.5312 5.12187 15.9187 6.02812C16.3062 6.93437 16.5 7.9125 16.5 8.9625C16.5 10.0125 16.3062 10.9969 15.9187 11.9156C15.5312 12.8344 15 13.6312 14.325 14.3062C13.65 14.9812 12.8562 15.5156 11.9437 15.9094C11.0312 16.3031 10.05 16.5 9 16.5ZM9 15.4125C9.4375 14.9625 9.80312 14.4469 10.0969 13.8656C10.3906 13.2844 10.6312 12.5937 10.8187 11.7937H7.2C7.375 12.5437 7.60937 13.2187 7.90312 13.8187C8.19687 14.4187 8.5625 14.95 9 15.4125ZM7.40625 15.1875C7.09375 14.7125 6.825 14.2 6.6 13.65C6.375 13.1 6.1875 12.4812 6.0375 11.7937H3.225C3.7 12.6812 4.25 13.3781 4.875 13.8844C5.5 14.3906 6.34375 14.825 7.40625 15.1875ZM10.6125 15.1687C11.5125 14.8812 12.3219 14.45 13.0406 13.875C13.7594 13.3 14.3375 12.6062 14.775 11.7937H11.9812C11.8187 12.4687 11.6281 13.0812 11.4094 13.6312C11.1906 14.1812 10.925 14.6937 10.6125 15.1687ZM2.85 10.6687H5.83125C5.79375 10.3312 5.77187 10.0281 5.76562 9.75937C5.75937 9.49062 5.75625 9.225 5.75625 8.9625C5.75625 8.65 5.7625 8.37187 5.775 8.12812C5.7875 7.88437 5.8125 7.6125 5.85 7.3125H2.85C2.7625 7.6125 2.70312 7.88125 2.67187 8.11875C2.64062 8.35625 2.625 8.6375 2.625 8.9625C2.625 9.2875 2.64062 9.57812 2.67187 9.83437C2.70312 10.0906 2.7625 10.3687 2.85 10.6687ZM6.99375 10.6687H11.025C11.075 10.2812 11.1062 9.96562 11.1187 9.72187C11.1312 9.47812 11.1375 9.225 11.1375 8.9625C11.1375 8.7125 11.1312 8.47187 11.1187 8.24062C11.1062 8.00937 11.075 7.7 11.025 7.3125H6.99375C6.94375 7.7 6.9125 8.00937 6.9 8.24062C6.8875 8.47187 6.88125 8.7125 6.88125 8.9625C6.88125 9.225 6.8875 9.47812 6.9 9.72187C6.9125 9.96562 6.94375 10.2812 6.99375 10.6687ZM12.15 10.6687H15.15C15.2375 10.3687 15.2969 10.0906 15.3281 9.83437C15.3594 9.57812 15.375 9.2875 15.375 8.9625C15.375 8.6375 15.3594 8.35625 15.3281 8.11875C15.2969 7.88125 15.2375 7.6125 15.15 7.3125H12.1687C12.2062 7.75 12.2312 8.08437 12.2437 8.31562C12.2562 8.54687 12.2625 8.7625 12.2625 8.9625C12.2625 9.2375 12.2531 9.49687 12.2344 9.74062C12.2156 9.98437 12.1875 10.2937 12.15 10.6687ZM11.9625 6.1875H14.775C14.3625 5.325 13.7969 4.60625 13.0781 4.03125C12.3594 3.45625 11.5312 3.05 10.5937 2.8125C10.9062 3.275 11.1719 3.775 11.3906 4.3125C11.6094 4.85 11.8 5.475 11.9625 6.1875ZM7.2 6.1875H10.8375C10.7 5.525 10.4687 4.88437 10.1437 4.26562C9.81875 3.64687 9.4375 3.1 9 2.625C8.6 2.9625 8.2625 3.40625 7.9875 3.95625C7.7125 4.50625 7.45 5.25 7.2 6.1875ZM3.225 6.1875H6.05625C6.19375 5.5125 6.36875 4.90937 6.58125 4.37812C6.79375 3.84687 7.0625 3.33125 7.3875 2.83125C6.45 3.06875 5.63125 3.46875 4.93125 4.03125C4.23125 4.59375 3.6625 5.3125 3.225 6.1875Z" fill="white"/>
                 </svg>
-                <span class="header-desktop__text-language">English</span>
+                <span class="header-desktop-links-language__text">English</span>
             </div>
-            <div class="header-desktop__menu" >
-                <div class="header-desktop__menu-item">
-                    <a class="header-desktop__menu-link" href="#">Information</a>
+
+            <div class="header-desktop-links-menu" >
+                <div class="header-desktop-links-menu-item">
+                    <a class="header-desktop-links-menu-item__link" href="#">Information</a>
                 </div>
-                <div class="header-desktop__menu-item">
-                    <a class="header-desktop__menu-link" href="#">Check--in</a>
+                <div class="header-desktop-links-menu-item">
+                    <a class="header-desktop-links-menu-item__link" href="#">Check--in</a>
                 </div>
-                <div class="header-desktop__menu-item">
-                    <a class="header-desktop__menu-link" href="#">Manage My Booking</a>
+                <div class="header-desktop-links-menu-item">
+                    <a class="header-desktop-links-menu-item__link" href="#">Manage My Booking</a>
                 </div>
             </div>
         </div>
@@ -79,31 +79,31 @@ in addition to some menu display functionalities -->
     <!-- This section is the flight search section on mobile devices -->
     <h2 class="header-flights__title">Economic flights</h2>
     <div class="header-flights-container-mobile">
-        <div class="header-flights__input-group">
-            <input type="text" class="header-flights__input" placeholder="Origin" >
-            <input type="text" class="header-flights__input" placeholder="Destination">
+        <div class="header-flights-container-mobile-group">
+            <input type="text" class="header-flights-container-mobile-group__input" placeholder="Origin" >
+            <input type="text" class="header-flights-container-mobile-group__input" placeholder="Destination">
         </div>
-        <div class="header-flights__input-group">
-            <input type="text" class="header-flights__input" placeholder="Date">
-            <input type="text" class="header-flights__input" placeholder="Passenger">
+        <div class="header-flights-container-mobile-group">
+            <input type="text" class="header-flights-container-mobile-group__input" placeholder="Date">
+            <input type="text" class="header-flights-container-mobile-group__input" placeholder="Passenger">
         </div>
 
-        <div class="header-flights__button-container">
-            <button class="header-flights__button" (click)="onClick()" [class.click-animation]="clickButton">Search</button>
+        <div class="header-flights-container-mobile-button">
+            <button class="header-flights-container-mobile-button__btn" (click)="onClick()" [class.click-animation]="clickButton">Search</button>
         </div>
     </div>
 
     <!-- This section is the flight search section on desktop devices -->
     <div class="header-flights-container-desktop">
-        <div class="header-flights-desktop__input-group">
-            <input class="header-flights-desktop__input header-flights-desktop__input--origin" type="text" placeholder="Origin">
-            <input class="header-flights-desktop__input header-flights-desktop__input--destination" type="text" placeholder="Destination">
-            <input class="header-flights-desktop__input header-flights-desktop__input--date"  type="text" placeholder="Date">
-            <input class="header-flights-desktop__input header-flights-desktop__input--passenger"  type="text" placeholder="Passenger">
+        <div class="header-flights-container-desktop-group">
+            <input class="header-flights-container-desktop-group__input header-flights-container-desktop-group__input--origin" type="text" placeholder="Origin">
+            <input class="header-flights-container-desktop-group__input header-flights-container-desktop-group__input--destination" type="text" placeholder="Destination">
+            <input class="header-flights-container-desktop-group__input header-flights-container-desktop-group__input--date"  type="text" placeholder="Date">
+            <input class="header-flights-container-desktop-group__input header-flights-container-desktop-group__input--passenger"  type="text" placeholder="Passenger">
         </div>
 
-        <div class="header-flights-desktop__button-container">
-            <button class="header-flights-desktop__button" (click)="onClick()" [class.click-animation]="clickButton">Search</button>
+        <div class="header-flights-container-desktop-button">
+            <button class="header-flights-container-desktop-button__btn" (click)="onClick()" [class.click-animation]="clickButton">Search</button>
         </div>
 
     </div>

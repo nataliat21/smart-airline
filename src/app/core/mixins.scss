@@ -38,3 +38,15 @@
     font-size: $font-size;
     border-radius: $border-radius;
 }
+
+//Mixin to set width and hight properties
+@mixin set-width-and-height($width, $height){
+    width: $width;
+    height: $height;
+}
+
+//Mixin to set font weight and font size properties
+@mixin set-font-weight-and-font-size($font-weight, $font-size){
+    font-weight: $font-weight;
+    font-size: $font-size;
+}

@@ -1,0 +1,118 @@
+@import '../../../styles.scss';
+
+
+
+.footer{
+    padding: 20px 0 25px 0;
+    background-color: $border-color-header-input;
+
+    @media (min-width: 992px){
+        padding: 20px 0 15px 0;
+    }
+
+    //Styles for the section that contains the logo and quick access links
+    .footer-container{
+        @include set-flex-direction(column);
+
+        @media (min-width: 992px){
+            @include set-flex-direction(row);
+            justify-content: space-between;
+            padding: 30px 60px 0 60px;
+        }
+        
+        .footer-container-logo{
+            @include set-flex-direction(column);
+            align-items: center;
+
+            @media (min-width: 992px){
+                @include flex-align(flex-start);
+            }
+
+            .footer-container-logo__icon{
+                @include set-width-and-height(95px, 80px);
+            }
+
+            .footer-container-logo-content{
+                text-align: center;
+                max-width:165px;
+
+                @media (min-width: 992px){
+                    text-align: left;
+                }
+
+                .footer-container-logo-content__text{
+                    @include set-font-weight-and-font-size(bold,13px);
+                    font-family: 'Inter', sans-serif;
+
+                    @media (min-width: 992px){
+                        max-width:190px;
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+
+        .footer-container-links{
+            display: grid;
+            grid-template-rows: 1fr 1fr 1fr;
+            gap: 20px;
+            padding: 0 0 0 30px;
+
+            @media (min-width: 992px){
+                display: grid;
+                grid-template-rows: 0 0 0;
+                grid-template-columns: 1fr 1fr 1fr;
+                justify-content: flex-end;
+                gap: 15px;
+            }
+
+            .footer-container-links-items{
+                @include set-flex-direction(column);
+                gap:10px;
+
+                .footer-container-links-items__link{
+                    @include set-font-weight-and-font-size(bold,13px);
+                    text-decoration: none;
+                    color: black;
+                    font-family: 'Inter', sans-serif;
+
+                    @media (min-width: 992px){
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+    }
+
+    //Styles for the social media section
+    .footer-social{
+        @include set-flex-direction(column);
+        align-items: center;
+        padding: 15px 0 0 0;
+
+        .footer-social-content{
+            @include set-font-weight-and-font-size(bold,14px);
+
+            @media (min-width: 992px){
+                font-size: 15px;
+            }
+
+            .footer-social-content__text{
+                margin: 10px 0 8px 0;
+            }
+        }
+
+        .footer-social-icons{
+            display: flex;
+            gap: 8px;
+            
+            .footer-social-icons__icon{
+                @include set-width-and-height(30px, 30px);
+
+                @media (min-width: 992px){
+                    @include set-width-and-height(34px, 34px);
+                }
+            }
+        }
+    }
+}

@@ -218,17 +218,10 @@
             text-align: center; 
 
             .header-flights__button{
-                padding:10px 40px;
-                background-color: $primary-header-background-color;
-                color: $primary-header-text-color;
-                border: none;
-                border-radius: 5px;
-                cursor: pointer;
+                @include set-padding-background-color-color-and-border(10px 40px, $primary-header-background-color,$primary-header-text-color, none);
+                @include set-cursor-font-weight-font-size-and-border-radius(pointer,600,14px,30px);
                 margin-bottom: 5px;
                 font-family: 'Inter', sans-serif;
-                font-weight: 600;
-                border-radius: 30px;
-                font-size: 14px;
                 
                 &:hover{
                     background-color: #013D40;
@@ -335,22 +328,13 @@
                 flex-grow: 1; 
                 @include flex-align(center);
                 .header-flights-desktop__button{
-                    padding:15px 40px;
-                    background-color: $primary-header-background-color;
-                    color: $primary-header-text-color;
-                    border: none;
-                    border-radius: 5px;
-                    cursor: pointer;
+                    @include set-padding-background-color-color-and-border(15px 40px, $primary-header-background-color, $primary-header-text-color, none);
+                    @include set-cursor-font-weight-font-size-and-border-radius(pointer,600,14px,30px);
                     font-family: 'Inter', sans-serif;
-                    font-weight: 600;
-                    border-radius: 30px;
-                    font-size: 14px;
 
-                    
                     @media (min-width: 992px) and (max-width: 1200px){
                         padding:15px 35px;
                     }
-
 
                     &:hover{
                         background-color: #013D40;

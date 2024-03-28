@@ -16,3 +16,25 @@
     display: flex;
     align-items: $align;
 }
+
+//Mixin to set object fit and width properties
+@mixin set-object-fit-and-width($object-fit, $width){
+    object-fit: $object-fit;
+    width: $width;
+}
+
+//Mixin to set padding, background color, text color and border properties
+@mixin set-padding-background-color-color-and-border($padding, $background-color, $color-text, $border){
+    padding: $padding;
+    background-color: $background-color;
+    color: $color-text;
+    border: $border;
+}
+
+//Mixin to set cursor, font weight, font size and border radius properties
+@mixin set-cursor-font-weight-font-size-and-border-radius($cursor,$font-weight, $font-size, $border-radius){
+    cursor: $cursor;
+    font-weight: $font-weight;
+    font-size: $font-size;
+    border-radius: $border-radius;
+}

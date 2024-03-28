@@ -51,8 +51,7 @@
 
         .main-advertisement-image{
             .main-advertisement-image__img--mobile{
-                object-fit:cover;
-                width: 100%;
+                @include set-object-fit-and-width(cover,100%);
                 border-radius: 15px 15px 0 0;
             }
             .main-advertisement-image__img--desktop{
@@ -65,7 +64,7 @@
                 }
                 .main-advertisement-image__img--desktop{
                     display: block;
-                    width: 100%;
+                    @include set-object-fit-and-width(cover,100%);
                     border-radius: 15px 0 0 15px;
                     
                 }
@@ -113,18 +112,10 @@
                 
                 .main-advertisement-button__btn{
     
-                    padding:10px 40px;
-                    background-color: $primary-header-text-color;
-                    color: $primary-header-background-color;
-                    border:2px solid $primary-header-background-color;
-                    border-radius: 5px;
-                    cursor: pointer;
+                    @include set-padding-background-color-color-and-border(10px 40px, $primary-header-text-color,$primary-header-background-color, 2px solid $primary-header-background-color);
+                    @include set-cursor-font-weight-font-size-and-border-radius(pointer,bold,14px,30px);
                     font-family: 'Inter', sans-serif;
-                    font-weight: bold;
-                    border-radius: 30px;
-                    font-size: 14px;
 
-                    
                     @media (min-width: 992px){
                         display: flex;
                         justify-content: flex-end;
@@ -172,16 +163,10 @@
         padding: 0 0 40px 0;
 
         .main-container-button__btn{
-            padding:15px 20px;
-            background-color: $primary-header-background-color;
-            color: $primary-header-text-color;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
+
+            @include set-padding-background-color-color-and-border(15px 20px,$primary-header-background-color, $primary-header-text-color, none);
+            @include set-cursor-font-weight-font-size-and-border-radius(pointer,700,13px,30px);
             font-family: 'Inter', sans-serif;
-            font-weight: 700;
-            border-radius: 30px;
-            font-size: 13px;
             margin-top: 30px;
             
 

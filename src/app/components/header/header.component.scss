@@ -144,6 +144,8 @@
 
     //Styles for the flight search section on mobile devices
     .header-flights-container-mobile{
+        position: relative;
+        z-index: 999;
         max-width: 1200px;
         margin: 0 auto;
         padding: 15px 0;
@@ -216,7 +218,7 @@
             text-align: center; 
 
             .header-flights__button{
-                padding:15px 40px;
+                padding:10px 40px;
                 background-color: $primary-header-background-color;
                 color: $primary-header-text-color;
                 border: none;

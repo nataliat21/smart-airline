@@ -6,12 +6,12 @@
 
     @media (min-width: 992px){
         height: 350px;
-        background: linear-gradient(90deg, rgba(1, 106, 112, 0) 23%, #016A70 70.5%), url('../../../assets/images/main-banner\ \(1\).png');
+        background: linear-gradient(90deg, rgba(1, 106, 112, 0) 23%, #016A70 70.5%), url('../../../assets/images/main-banner-1.png');
         background-size: cover;
         background-repeat: no-repeat;
     }
 
-    @media (min-width: 1144px){
+    @media (min-width: 1440px){
         background: linear-gradient(90deg, rgba(1, 106, 112, 0) 23%, #016A70 70%), url('../../../assets/images/main-banner-2.png');
         background-size: cover;
         background-position-y: 90%;
@@ -138,12 +138,14 @@
 
         @media (min-width: 992px){
             font-size: 29px;
-            margin: 0 0 30px 0;
+            margin: 0 0 40px 0;
         }
     }
 
     //Styles for the flight search section on mobile devices
     .header-flights-container-mobile{
+        position: relative;
+        z-index: 999;
         max-width: 1200px;
         margin: 0 auto;
         padding: 15px 0;
@@ -180,13 +182,12 @@
                 transition:  0.3s ease;
 
                 &::placeholder{
-                    color: rgba(93, 91, 91, 0.898);
+                    color: $header-input-placeholder-color;
                     font-weight: 600;
                 }
 
                 &:hover{
                     border: 1px solid $border-color-header-input;
-                    
                     cursor: pointer;
                 }
 
@@ -217,17 +218,10 @@
             text-align: center; 
 
             .header-flights__button{
-                padding:15px 40px;
-                background-color: $primary-header-background-color;
-                color: $primary-header-text-color;
-                border: none;
-                border-radius: 5px;
-                cursor: pointer;
+                @include set-padding-background-color-color-and-border(10px 40px, $primary-header-background-color,$primary-header-text-color, none);
+                @include set-cursor-font-weight-font-size-and-border-radius(pointer,600,14px,30px);
                 margin-bottom: 5px;
                 font-family: 'Inter', sans-serif;
-                font-weight: 600;
-                border-radius: 30px;
-                font-size: 14px;
                 
                 &:hover{
                     background-color: #013D40;
@@ -269,7 +263,7 @@
             margin: 0 60px;
             border-radius: 15px;
 
-            @media (min-width: 1201px) and (max-width: 1440px){
+            @media (min-width: 1200px) and (max-width: 1440px){
                 gap: 5px;
             }
             
@@ -294,6 +288,11 @@
                     border: 1px solid #2c2b2b7f;
                     transition:  0.3s ease;
                     cursor: pointer;
+
+                    &::placeholder{
+                        color: $header-input-placeholder-color;
+                        font-weight: 600;
+                    }
 
                     &:hover{
                         border: 1px solid $border-color-header-input;
@@ -329,22 +328,13 @@
                 flex-grow: 1; 
                 @include flex-align(center);
                 .header-flights-desktop__button{
-                    padding:15px 40px;
-                    background-color: $primary-header-background-color;
-                    color: $primary-header-text-color;
-                    border: none;
-                    border-radius: 5px;
-                    cursor: pointer;
+                    @include set-padding-background-color-color-and-border(15px 40px, $primary-header-background-color, $primary-header-text-color, none);
+                    @include set-cursor-font-weight-font-size-and-border-radius(pointer,600,14px,30px);
                     font-family: 'Inter', sans-serif;
-                    font-weight: 600;
-                    border-radius: 30px;
-                    font-size: 14px;
 
-                    
                     @media (min-width: 992px) and (max-width: 1200px){
                         padding:15px 35px;
                     }
-
 
                     &:hover{
                         background-color: #013D40;

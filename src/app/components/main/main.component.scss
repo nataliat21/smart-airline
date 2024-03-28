@@ -1,0 +1,201 @@
+@import '../../../styles.scss';
+
+.main{
+    background-color: $background-color-main-section;
+
+    //Styles for the main title
+    .main-container-title{
+        @include set-flex-align-and-justify-content(center, center);
+        padding: 110px 0 0 0;
+        white-space: wrap;
+
+        @media (max-width: 320px){
+            padding: 230px 0 0 0;
+            text-align: center;
+        }
+
+        @media (min-width: 992px){
+            padding: 40px 0 20px 0;
+            margin: 0 50px;
+
+            .main-container-title__line {
+                flex: 1; 
+                border-top: 1px dashed black; 
+            }
+        }
+
+        .main-container-title__title{
+            font-size: 23px;
+            font-weight: 800;
+
+            @media (min-width: 992px){
+                font-size: 25px;
+                margin: 0 20px;
+            }
+        }
+    }
+    
+    //Styles for the banner that contains the flight offers
+    .main-advertisement{
+        height: auto;
+        margin: 0 13px;
+        border-radius: 15px;
+        background-color: $main-card-background-color;
+        display: grid;
+        grid-template-rows: auto 1fr;
+
+        @media (min-width: 992px){
+            grid-template-columns: 1fr 1fr;
+            margin: 20px 50px;
+        }
+
+        .main-advertisement-image{
+            .main-advertisement-image__img--mobile{
+                @include set-object-fit-and-width(cover,100%);
+                border-radius: 15px 15px 0 0;
+            }
+            .main-advertisement-image__img--desktop{
+                display: none;
+            }
+
+            @media (min-width: 992px){
+                .main-advertisement-image__img--mobile{
+                    display: none;
+                }
+                .main-advertisement-image__img--desktop{
+                    display: block;
+                    @include set-object-fit-and-width(cover,100%);
+                    border-radius: 15px 0 0 15px;
+                    
+                }
+            }
+        }
+
+        .main-advertisement-content{
+            padding: 0 15px;
+
+            @media (min-width: 992px){
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-end;
+                padding: 0 40px;
+            }
+
+
+            .main-advertisement-content__title{
+                font-size: 20px;
+                align-self: flex-start;
+
+                @media (min-width: 992px){
+                    font-size: 25px;
+                    margin: 0 0 5px 0;
+                }
+            }
+
+            .main-advertisement-content__description{
+                font-size: 14px;
+                align-self: flex-start;
+
+                @media (min-width: 992px){
+                    font-size: 18px;
+                }
+            }
+
+            .main-advertisement-button{
+                @include set-flex-align-and-justify-content(center, flex-end);
+                margin: 70px 20px 0 0;
+                padding: 0 0 20px 0;
+
+                @media (min-width: 992px){
+                    margin:0px 20px 0 0;
+                }
+                
+                .main-advertisement-button__btn{
+    
+                    @include set-padding-background-color-color-and-border(10px 40px, $primary-header-text-color,$primary-header-background-color, 2px solid $primary-header-background-color);
+                    @include set-cursor-font-weight-font-size-and-border-radius(pointer,bold,14px,30px);
+                    font-family: 'Inter', sans-serif;
+
+                    @media (min-width: 992px){
+                        display: flex;
+                        justify-content: flex-end;
+                        margin-top: 20px;
+                        background-color: $primary-header-background-color;
+                        color: $primary-header-text-color;
+                    }
+                    
+                    &:hover{
+                        background-color: #013D40;
+                        transition: background-color 0.3s ease; 
+                    }
+    
+                    &:hover:hover{
+                        background-color: #06383b;
+                    }
+    
+                    &.click-animation {
+                        animation: bounce-left 0.9s  ease; 
+                    }
+    
+                    
+                    @keyframes bounce-left {
+                        0%, 100% {
+                            transform: scaleX(1);
+                        }
+                        50% {
+                            transform: scaleX(0.8); 
+                            background-color: #042122;
+                            transform-origin: left;
+                        }
+                    }
+    
+                }
+            } 
+        }
+
+
+
+    }
+
+    //Styles for the button that invites users to see which destinations are on offer
+    .main-container-button{
+        @include set-flex-align-and-justify-content(center, center);
+        padding: 0 0 40px 0;
+
+        .main-container-button__btn{
+
+            @include set-padding-background-color-color-and-border(15px 20px,$primary-header-background-color, $primary-header-text-color, none);
+            @include set-cursor-font-weight-font-size-and-border-radius(pointer,700,13px,30px);
+            font-family: 'Inter', sans-serif;
+            margin-top: 30px;
+            
+
+            &:hover{
+                background-color: #013D40;
+                transition: background-color 0.3s ease; 
+            }
+
+            &:hover:hover{
+                background-color: #06383b;
+            }
+
+            &.click-animation-up {
+                animation: bounce-up 0.9s ease; 
+                
+            }
+
+            @keyframes bounce-up {
+                0%, 100% {
+                    transform: translateY(0);
+                }
+                50% {
+                    transform: translateY(-0.5px);
+                    background-color: #042122; 
+                }
+
+            }
+        }
+
+    }
+}
+

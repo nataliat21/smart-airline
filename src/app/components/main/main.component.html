@@ -1,0 +1,33 @@
+<!-- In this component called main, you can find a section related to the website's offers
+in addition to viewing it on mobile and desktop devices -->
+
+<main class="main">
+
+    <!-- Section containing the main title -->
+    <section class="main-container-title">
+        <div class="main-container-title__line"></div>
+        <h2 class="main-container-title__title">Smart ease way to flight</h2>
+        <div class="main-container-title__line"></div>
+    </section>
+    
+    <!-- Section containing the flight offer banner -->
+    <section class="main-advertisement">
+        <div class="main-advertisement-image">
+            <img class="main-advertisement-image__img--mobile" src="../../../assets/images/airplane-offers-mobile.png" alt="Advertisement image mobile">
+            <img class="main-advertisement-image__img--desktop" src="../../../assets/images/airplane-offers-desktop.png" alt="Advertisement image desktop">
+        </div>
+
+        <div class="main-advertisement-content">
+            <h2 class="main-advertisement-content__title">Offers are ending</h2>
+            <p class="main-advertisement-content__description">Discover exclusive offers! Stay tuned and follow our pages to catch all the latest promotions.</p>
+            <div class="main-advertisement-button">
+                <button class="main-advertisement-button__btn" (click)="onClick()" [class.click-animation]="clickButton">Search</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section that contains a button inviting users to see flight offers -->
+    <section class="main-container-button">
+        <button class="main-container-button__btn" (click)="onClickViewDestinations()" [class.click-animation-up]="clickButtonDestinations">View Destinations</button>
+    </section>
+</main>

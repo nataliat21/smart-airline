@@ -1,6 +1,7 @@
 @import '../../../styles.scss';
 
 
+
 .footer{
     padding: 20px 0 25px 0;
     background-color: $border-color-header-input;
@@ -9,6 +10,7 @@
         padding: 20px 0 15px 0;
     }
 
+    //Styles for the section that contains the logo and quick access links
     .footer-container{
         display: flex;
         flex-direction: column;
@@ -91,6 +93,7 @@
         }
     }
 
+    //Styles for the social media section
     .footer-social{
         display: flex;
         flex-direction: column;

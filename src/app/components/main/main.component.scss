@@ -12,9 +12,24 @@
             text-align: center;
         }
 
-        .main-container__title{
+        @media (min-width: 992px){
+            padding: 40px 0 20px 0;
+            margin: 0 50px;
+
+            .line {
+                flex: 1; 
+                border-top: 1px dashed black; 
+            }
+        }
+
+        .main-container-title__title{
             font-size: 23px;
             font-weight: 800;
+
+            @media (min-width: 992px){
+                font-size: 25px;
+                margin: 0 20px;
+            }
         }
     }
     
@@ -23,75 +38,134 @@
         margin: 0 13px;
         border-radius: 15px;
         background-color: $main-card-background-color;
+        display: grid;
+        grid-template-rows: auto 1fr;
+
+        @media (min-width: 992px){
+            grid-template-columns: 1fr 1fr;
+            margin: 20px 50px;
+        }
 
         .main-advertisement-image{
-            .main-advertisement-image__img{
+            .main-advertisement-image__img--mobile{
                 object-fit:cover;
                 width: 100%;
                 border-radius: 15px 15px 0 0;
+            }
+            .main-advertisement-image__img--desktop{
+                display: none;
+            }
+
+            @media (min-width: 992px){
+                .main-advertisement-image__img--mobile{
+                    display: none;
+                }
+                .main-advertisement-image__img--desktop{
+                    display: block;
+                    width: 100%;
+                    border-radius: 15px 0 0 15px;
+                    
+                }
             }
         }
 
         .main-advertisement-content{
             padding: 0 15px;
 
+            @media (min-width: 992px){
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-end;
+                padding: 0 40px;
+            }
+
+
             .main-advertisement-content__title{
                 font-size: 20px;
+                align-self: flex-start;
+
+                @media (min-width: 992px){
+                    font-size: 25px;
+                    margin: 0 0 5px 0;
+                }
             }
 
             .main-advertisement-content__description{
                 font-size: 14px;
+                align-self: flex-start;
+
+                @media (min-width: 992px){
+                    font-size: 18px;
+                }
             }
+
+            .main-advertisement-button{
+                @include set-flex-align-and-justify-content(center, flex-end);
+                margin: 70px 20px 0 0;
+                padding: 0 0 20px 0;
+
+                @media (min-width: 992px){
+                    margin:0px 20px 0 0;
+                }
+                
+                .main-advertisement-button__btn{
+    
+                    padding:10px 40px;
+                    background-color: $primary-header-text-color;
+                    color: $primary-header-background-color;
+                    border:2px solid $primary-header-background-color;
+                    border-radius: 5px;
+                    cursor: pointer;
+                    font-family: 'Inter', sans-serif;
+                    font-weight: bold;
+                    border-radius: 30px;
+                    font-size: 14px;
+
+                    
+                    @media (min-width: 992px){
+                        display: flex;
+                        justify-content: flex-end;
+                        margin-top: 20px;
+                        background-color: $primary-header-background-color;
+                        color: $primary-header-text-color;
+                    }
+                    
+                    &:hover{
+                        background-color: #013D40;
+                        transition: background-color 0.3s ease; 
+                    }
+    
+                    &:hover:hover{
+                        background-color: #06383b;
+                    }
+    
+                    &.click-animation {
+                        animation: bounce-left 0.9s  ease; 
+                    }
+    
+                    
+                    @keyframes bounce-left {
+                        0%, 100% {
+                            transform: scaleX(1);
+                        }
+                        50% {
+                            transform: scaleX(0.8); 
+                            background-color: #042122;
+                            transform-origin: left;
+                        }
+                    }
+    
+                }
+            } 
         }
 
-        .main-advertisement-button{
-            @include set-flex-align-and-justify-content(center, flex-end);
-            margin: 70px 20px 0 0;
-            padding: 0 0 20px 0;
-            .main-advertisement-button__btn{
-                padding:10px 40px;
-                background-color: $primary-header-text-color;
-                color: $primary-header-background-color;
-                border:2px solid $primary-header-background-color;
-                border-radius: 5px;
-                cursor: pointer;
-                font-family: 'Inter', sans-serif;
-                font-weight: bold;
-                border-radius: 30px;
-                font-size: 14px;
-                
-                &:hover{
-                    background-color: #013D40;
-                    transition: background-color 0.3s ease; 
-                }
 
-                &:hover:hover{
-                    background-color: #06383b;
-                }
-
-                &.click-animation {
-                    animation: bounce-left 0.9s  ease; 
-                }
-
-                
-                @keyframes bounce-left {
-                    0%, 100% {
-                        transform: scaleX(1);
-                    }
-                    50% {
-                        transform: scaleX(0.8); 
-                        background-color: #042122;
-                        transform-origin: left;
-                    }
-                }
-
-            }
-        }
 
     }
 
     .main-container-button{
         @include set-flex-align-and-justify-content(center, center);
+        padding: 0 0 40px 0;
 
         .main-container-button__btn{
             padding:15px 20px;
@@ -136,33 +210,3 @@
     }
 }
 
-/* @media (min-width: 992px){
-    .main{
-        .main-container__title {
-            position: relative;
-            font-size: 24px;
-            text-align: center;
-            margin-bottom: 20px;
-        }
-        
-        .main-container__title::before,
-        .main-container__title::after {
-            content: "";
-            position: absolute;
-            width: 40%;
-            height: 1px;
-            background-color: black;
-            top: 50%;
-            transform: translateY(-50%);
-        }
-        
-        .main-container__title::before {
-            left: 0;
-        }
-        
-        .main-container__title::after {
-            right: 0;
-        }
-        
-    }
-} */

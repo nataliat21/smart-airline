@@ -1,20 +1,22 @@
 <main class="main">
     <section class="main-container-title">
+        <div class="line"></div>
         <h2 class="main-container-title__title">Smart ease way to flight</h2>
+        <div class="line"></div>
     </section>
     
     <section class="main-advertisement">
         <div class="main-advertisement-image">
-            <img class="main-advertisement-image__img" src="../../../assets/images/resize.png" alt="Advertisement image">
+            <img class="main-advertisement-image__img--mobile" src="../../../assets/images/airplane-offers-mobile.png" alt="Advertisement image">
+            <img class="main-advertisement-image__img--desktop" src="../../../assets/images/airplane-offers-desktop.png" alt="Advertisement image">
         </div>
 
         <div class="main-advertisement-content">
             <h2 class="main-advertisement-content__title">Offers are ending</h2>
             <p class="main-advertisement-content__description">Discover exclusive offers! Stay tuned and follow our pages to catch all the latest promotions.</p>
-        </div>
-
-        <div class="main-advertisement-button">
-            <button class="main-advertisement-button__btn" (click)="onClick()" [class.click-animation]="clickButton">Search</button>
+            <div class="main-advertisement-button">
+                <button class="main-advertisement-button__btn" (click)="onClick()" [class.click-animation]="clickButton">Search</button>
+            </div>
         </div>
     </section>
 

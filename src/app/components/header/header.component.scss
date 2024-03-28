@@ -103,6 +103,11 @@
                     .header-desktop__text-language{
                         color: $primary-header-text-color;
                         font-size: 12px;
+
+                        &:hover{
+                            text-decoration: underline;
+                            cursor: pointer;
+                        }
                     }
                 }
 

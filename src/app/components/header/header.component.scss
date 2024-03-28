@@ -38,6 +38,7 @@
     //Styles for the dropdown menu on mobile devices
     .header-mobile-menu{
         position: absolute;
+        z-index: 999;
         @include set-width-and-height(100%, 100%);
         top: 0%;
         @extend .header;
@@ -148,7 +149,6 @@
     //Styles for the flight search section on mobile devices
     .header-flights-container-mobile{
         position: relative;
-        z-index: 999;
         max-width: 1200px;
         margin: 0 auto;
         padding: 15px 0;

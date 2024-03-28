@@ -12,30 +12,24 @@
 
     //Styles for the section that contains the logo and quick access links
     .footer-container{
-        display: flex;
-        flex-direction: column;
+        @include set-flex-direction(column);
 
         @media (min-width: 992px){
-            display: flex;
-            flex-direction: row;
+            @include set-flex-direction(row);
             justify-content: space-between;
             padding: 30px 60px 0 60px;
         }
         
         .footer-container-logo{
-            display: flex;
+            @include set-flex-direction(column);
             align-items: center;
-            flex-direction: column;
 
-            
             @media (min-width: 992px){
-                display: flex;
-                align-items: flex-start;
+                @include flex-align(flex-start);
             }
 
             .footer-container-logo__icon{
-                width:95px; 
-                height: 80px;
+                @include set-width-and-height(95px, 80px);
             }
 
             .footer-container-logo-content{
@@ -47,9 +41,8 @@
                 }
 
                 .footer-container-logo-content__text{
-                    font-weight: bold;
+                    @include set-font-weight-and-font-size(bold,13px);
                     font-family: 'Inter', sans-serif;
-                    font-size: 13px;
 
                     @media (min-width: 992px){
                         max-width:190px;
@@ -74,16 +67,14 @@
             }
 
             .footer-container-links-items{
-                display: flex;
-                flex-direction: column;
+                @include set-flex-direction(column);
                 gap:10px;
 
                 .footer-container-links-items__link{
+                    @include set-font-weight-and-font-size(bold,13px);
                     text-decoration: none;
                     color: black;
-                    font-weight: bold;
                     font-family: 'Inter', sans-serif;
-                    font-size: 13px;
 
                     @media (min-width: 992px){
                         font-size: 14px;
@@ -95,14 +86,12 @@
 
     //Styles for the social media section
     .footer-social{
-        display: flex;
-        flex-direction: column;
+        @include set-flex-direction(column);
         align-items: center;
         padding: 15px 0 0 0;
 
         .footer-social-content{
-            font-weight: bold;
-            font-size: 14px;
+            @include set-font-weight-and-font-size(bold,14px);
 
             @media (min-width: 992px){
                 font-size: 15px;
@@ -118,12 +107,10 @@
             gap: 8px;
             
             .footer-social-icons__icon{
-                width: 30px;
-                height: 30px;
+                @include set-width-and-height(30px, 30px);
 
                 @media (min-width: 992px){
-                    width: 34px;
-                    height: 34px;
+                    @include set-width-and-height(34px, 34px);
                 }
             }
         }

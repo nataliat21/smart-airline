@@ -89,7 +89,7 @@ in addition to some menu display functionalities -->
         </div>
 
         <div class="header-flights-container-mobile-button">
-            <button class="header-flights-container-mobile-button__btn" (click)="onClick()" [class.click-animation]="clickButton">Search</button>
+            <button class="header-flights-container-mobile-button__btn" (click)="onClickSearchMobile()" [class.click-animation]="searchButtonMobile">Search</button>
         </div>
     </div>
 
@@ -103,11 +103,9 @@ in addition to some menu display functionalities -->
         </div>
 
         <div class="header-flights-container-desktop-button">
-            <button class="header-flights-container-desktop-button__btn" (click)="onClick()" [class.click-animation]="clickButton">Search</button>
+            <button class="header-flights-container-desktop-button__btn" (click)="onClickSearchDesktop()" [class.click-animation]="searchButtonDesktop">Search</button>
         </div>
 
     </div>
     
-
-
 </header>

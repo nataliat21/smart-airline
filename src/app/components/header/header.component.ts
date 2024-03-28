@@ -9,17 +9,25 @@ import { Component } from '@angular/core';
 })
 export class HeaderComponent {
   openMenu: boolean = false;
+  searchButtonMobile: boolean = false;
+  searchButtonDesktop: boolean = false;
+
 
   toggleMenu() {
     this.openMenu = !this.openMenu;
   }
 
-  clickButton: boolean = false;
-
-  onClick(): void {
-    this.clickButton = true;
+  onClickSearchMobile(): void {
+    this.searchButtonMobile = true;
     setTimeout(() => {
-      this.clickButton = false;
+      this.searchButtonMobile = false;
+    }, 700);
+  }
+
+  onClickSearchDesktop(): void {
+    this.searchButtonDesktop = true;
+    setTimeout(() => {
+      this.searchButtonDesktop = false;
     }, 700);
   }
 }

@@ -2,6 +2,8 @@
 
 .main{
     background-color: $background-color-main-section;
+
+    //Styles for the main title
     .main-container-title{
         @include set-flex-align-and-justify-content(center, center);
         padding: 110px 0 0 0;
@@ -16,7 +18,7 @@
             padding: 40px 0 20px 0;
             margin: 0 50px;
 
-            .line {
+            .main-container-title__line {
                 flex: 1; 
                 border-top: 1px dashed black; 
             }
@@ -33,6 +35,7 @@
         }
     }
     
+    //Styles for the banner that contains the flight offers
     .main-advertisement{
         height: auto;
         margin: 0 13px;
@@ -163,6 +166,7 @@
 
     }
 
+    //Styles for the button that invites users to see which destinations are on offer
     .main-container-button{
         @include set-flex-align-and-justify-content(center, center);
         padding: 0 0 40px 0;

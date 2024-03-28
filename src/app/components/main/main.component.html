@@ -1,10 +1,16 @@
+<!-- In this component called main, you can find a section related to the website's offers
+in addition to viewing it on mobile and desktop devices -->
+
 <main class="main">
+
+    <!-- Section containing the main title -->
     <section class="main-container-title">
         <div class="main-container-title__line"></div>
         <h2 class="main-container-title__title">Smart ease way to flight</h2>
         <div class="main-container-title__line"></div>
     </section>
     
+    <!-- Section containing the flight offer banner -->
     <section class="main-advertisement">
         <div class="main-advertisement-image">
             <img class="main-advertisement-image__img--mobile" src="../../../assets/images/airplane-offers-mobile.png" alt="Advertisement image">
@@ -20,6 +26,7 @@
         </div>
     </section>
 
+    <!-- Section that contains a button inviting users to see flight offers -->
     <section class="main-container-button">
         <button class="main-container-button__btn" (click)="onClickViewDestinations()" [class.click-animation-up]="clickButtonDestinations">View Destinations</button>
     </section>

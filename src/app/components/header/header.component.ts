@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'header-component',
@@ -8,13 +8,15 @@ import { Component } from '@angular/core';
   styleUrl: './header.component.scss'
 })
 export class HeaderComponent {
+
+  @Output() menuToggled = new EventEmitter<boolean>();
   openMenu: boolean = false;
   searchButtonMobile: boolean = false;
   searchButtonDesktop: boolean = false;
 
-
   toggleMenu() {
     this.openMenu = !this.openMenu;
+    this.menuToggled.emit(this.openMenu);
   }
 
   onClickSearchMobile(): void {

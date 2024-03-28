@@ -37,6 +37,7 @@
 
     //Styles for the dropdown menu on mobile devices
     .header-mobile-menu{
+
         position: absolute;
         z-index: 999;
         @include set-width-and-height(100%, 100%);
@@ -54,6 +55,7 @@
 
         &.slide-in.show {
             transform: translateY(0);
+            
         }
 
         .header-mobile-menu-icons{

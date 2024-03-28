@@ -18,3 +18,11 @@ body{
     margin: 0px;
     padding: 0px;
 }
+body.no-scroll {
+    overflow-y: hidden;
+
+    @media (min-width: 992px){
+        overflow-y: visible;
+    }
+}
+

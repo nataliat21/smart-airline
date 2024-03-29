@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'header-component',
@@ -8,18 +8,31 @@ import { Component } from '@angular/core';
   styleUrl: './header.component.scss'
 })
 export class HeaderComponent {
-  openMenu: boolean = false;
 
+  @Output() menuToggled = new EventEmitter<boolean>();
+
+  openMenu: boolean = false;
+  searchButtonMobile: boolean = false;
+  searchButtonDesktop: boolean = false;
+
+  //Method that is responsible for toggling the visibility of the menu
   toggleMenu() {
     this.openMenu = !this.openMenu;
+    this.menuToggled.emit(this.openMenu);
   }
 
-  clickButton: boolean = false;
-
-  onClick(): void {
-    this.clickButton = true;
+  //Method that is responsible for handling an event that occurs when a search is clicked on the mobile device.
+  onClickSearchMobile(): void {
+    this.searchButtonMobile = true;
     setTimeout(() => {
-      this.clickButton = false;
+      this.searchButtonMobile = false;
+    }, 700);
+  }
+//Method that is responsible for handling an event that occurs when a search is clicked on the desktop.
+  onClickSearchDesktop(): void {
+    this.searchButtonDesktop = true;
+    setTimeout(() => {
+      this.searchButtonDesktop = false;
     }, 700);
   }
 }

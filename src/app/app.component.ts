@@ -13,4 +13,15 @@ import { FooterComponent } from './components/footer/footer.component';
 })
 export class AppComponent {
   title = 'smart-airline';
+
+  isMenuOpen: boolean = false;
+
+  handleMenuToggle(openMenu: boolean) {
+    this.isMenuOpen = openMenu;
+    if (openMenu) {
+      document.body.classList.add('no-scroll');
+    } else {
+      document.body.classList.remove('no-scroll');
+    }
+  }
 }

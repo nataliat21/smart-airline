@@ -6,13 +6,13 @@
 
     @media (min-width: 992px){
         height: 350px;
-        background: linear-gradient(90deg, rgba(1, 106, 112, 0) 23%, #016A70 70.5%), url('../../../assets/images/main-banner-1.png');
+        background: linear-gradient(90deg, rgba(1, 106, 112, 0) 23%, #016A70 70.5%), url('../../../assets/images/main-banner.png');
         background-size: cover;
         background-repeat: no-repeat;
     }
 
     @media (min-width: 1440px){
-        background: linear-gradient(90deg, rgba(1, 106, 112, 0) 23%, #016A70 70%), url('../../../assets/images/main-banner-2.png');
+        background: linear-gradient(90deg, rgba(1, 106, 112, 0) 23%, #016A70 70%), url('../../../assets/images/main-banner.png');
         background-size: cover;
         background-position-y: 90%;
     }
@@ -274,7 +274,7 @@
             .header-flights-container-desktop-group{
                 @include flex-align(center);
                 gap: 15px;
-                width: calc(100% - 120px); 
+                width: calc(100% - 130px); 
 
                 @media (min-width: 992px) and (max-width: 1024px){
                     gap: 8px;
@@ -290,6 +290,21 @@
                     border: 1px solid #2c2b2b7f;
                     transition:  0.3s ease;
                     cursor: pointer;
+
+                    @media (min-width: 1200px){
+                        width: 330px;
+                    }
+
+                    @media (min-width: 1440px){
+                        width: 390px;
+                    }
+
+                    @media (min-width: 1600px){
+                        width: 500px;
+                    }
+                    @media (min-width: 1920px){
+                        width: 600px;
+                    }
 
                     &::placeholder{
                         color: $header-input-placeholder-color;
@@ -323,6 +338,22 @@
                 .header-flights-container-desktop-group__input--passenger{
                     width: 120px;
                     @extend .header-flights-container-desktop-group__input--origin;
+
+                    @media (min-width: 1200px){
+                        width: 200px;
+                    }
+                    @media (min-width: 1440px){
+                        width: 210px;
+                    }
+                    @media (min-width: 1600px){
+                        width: 270px;
+                    }
+                    @media (min-width: 1600px){
+                        width: 270px;
+                    }
+                    @media (min-width: 1920px){
+                        width: 320px;
+                    }
                 }
             }
 
@@ -331,13 +362,14 @@
                 @include flex-align(center);
 
                 .header-flights-container-desktop-button__btn{
-                    @include set-padding-background-color-color-and-border(15px 40px, $primary-header-background-color, $primary-header-text-color, none);
+                    @include set-padding-background-color-color-and-border(12px 40px, $primary-header-background-color, $primary-header-text-color, none);
                     @include set-cursor-font-weight-font-size-and-border-radius(pointer,600,14px,30px);
                     font-family: 'Inter', sans-serif;
 
-                    @media (min-width: 992px) and (max-width: 1200px){
-                        padding:15px 35px;
+                    @media (min-width: 992px){
+                        padding:12px 35px;
                     }
+
 
                     &:hover{
                         background-color: #013D40;

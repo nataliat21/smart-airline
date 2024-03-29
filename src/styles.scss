@@ -8,9 +8,14 @@
     src: url('../src/assets/fonts/Roboto-Regular.ttf') format('truetype');
 }
 @font-face {
-    font-family: 'Inter';
-    src: url('../src/assets/fonts/Inter-Regular.ttf') format('truetype');
+    font-family: 'Gabara Sans';
+    src: url('../src/assets/fonts/GabaraSans-Bold.otf') format('opentype');
 }
+@font-face {
+    font-family: 'RFlex Regular';
+    src: url('../src/assets/fonts/RFlexRegular-JRJ8j.ttf') format('truetype');
+}
+
 
 /* Global styles for the body*/
 body{

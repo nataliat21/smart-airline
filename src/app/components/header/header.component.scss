@@ -109,7 +109,7 @@
 
                         &:hover{
                             text-decoration: underline;
-                            cursor: pointer;
+                            cursor: poRFlex Regular;
                         }
                     }
                 }
@@ -182,7 +182,8 @@
                 border: 1px solid #2c2b2b7f;
                 border-radius: 8px;
                 box-sizing: border-box;
-                font-family: 'Inter', sans-serif;
+                font-family: 'RFlex Regular', sans-serif;
+                font-size: 15px;
                 transition:  0.3s ease;
 
                 &::placeholder{
@@ -192,7 +193,7 @@
 
                 &:hover{
                     border: 1px solid $border-color-header-input;
-                    cursor: pointer;
+                    cursor: poRFlex Regular;
                 }
 
                 &:focus{
@@ -223,9 +224,9 @@
 
             .header-flights-container-mobile-button__btn{
                 @include set-padding-background-color-color-and-border(10px 40px, $primary-header-background-color,$primary-header-text-color, none);
-                @include set-cursor-font-weight-font-size-and-border-radius(pointer,600,14px,30px);
+                @include set-cursor-font-weight-font-size-and-border-radius(poRFlex Regular,600,14px,30px);
                 margin-bottom: 5px;
-                font-family: 'Inter', sans-serif;
+                font-family: 'Roboto Regular', sans-serif;
                 
                 &:hover{
                     background-color: #013D40;
@@ -283,13 +284,13 @@
                 .header-flights-container-desktop-group__input--origin,
                 .header-flights-container-desktop-group__input--destination{
                     @include set-width-and-height(320px, 40px);
-                    @include set-font-weight-and-font-size(600,14px);
+                    @include set-font-weight-and-font-size(600,16px);
                     border-radius: 8px;
                     padding: 0 0 0 10px;
-                    font-family: 'Inter', sans-serif;
+                    font-family: 'RFlex Regular', sans-serif;
                     border: 1px solid #2c2b2b7f;
                     transition:  0.3s ease;
-                    cursor: pointer;
+                    cursor: poRFlex Regular;
 
                     @media (min-width: 1200px){
                         width: 330px;
@@ -363,8 +364,8 @@
 
                 .header-flights-container-desktop-button__btn{
                     @include set-padding-background-color-color-and-border(12px 40px, $primary-header-background-color, $primary-header-text-color, none);
-                    @include set-cursor-font-weight-font-size-and-border-radius(pointer,600,14px,30px);
-                    font-family: 'Inter', sans-serif;
+                    @include set-cursor-font-weight-font-size-and-border-radius(poRFlex Regular,600,14px,30px);
+                    font-family: 'Roboto Regular', sans-serif;
 
                     @media (min-width: 992px){
                         padding:12px 35px;

@@ -29,7 +29,7 @@
             @include set-font-weight-and-font-size(800,23px);
 
             @media (min-width: 992px){
-                font-size: 25px;
+                font-size: 30px;
                 margin: 0 20px;
             }
         }
@@ -84,9 +84,10 @@
             .main-advertisement-content__title{
                 font-size: 20px;
                 align-self: flex-start;
+                font-weight: bold;
 
                 @media (min-width: 992px){
-                    font-size: 25px;
+                    font-size: 26px;
                     margin: 0 0 5px 0;
                 }
             }
@@ -94,9 +95,11 @@
             .main-advertisement-content__description{
                 font-size: 15px;
                 align-self: flex-start;
+                max-width: 300px;
 
                 @media (min-width: 992px){
                     font-size: 18px;
+                    max-width: 500px;
                 }
             }
 
@@ -113,30 +116,27 @@
     
                     @include set-padding-background-color-color-and-border(10px 40px, $primary-header-text-color,$primary-header-background-color, 2px solid $primary-header-background-color);
                     @include set-cursor-font-weight-font-size-and-border-radius(pointer,bold,14px,30px);
-                    font-family: 'Inter', sans-serif;
+                    font-family: 'Roboto Regular', sans-serif;
 
                     @media (min-width: 992px){
                         display: flex;
                         justify-content: flex-end;
                         margin-top: 20px;
-                        background-color: $primary-header-background-color;
-                        color: $primary-header-text-color;
                     }
                     
                     &:hover{
-                        background-color: #013D40;
+                        background-color: #DCEEF0;
                         transition: background-color 0.3s ease; 
                     }
     
                     &:hover:hover{
-                        background-color: #06383b;
+                        background-color: #B8D1D1;
                     }
     
                     &.click-animation {
                         animation: bounce-left 0.9s  ease; 
                     }
     
-                    
                     @keyframes bounce-left {
                         0%, 100% {
                             transform: scaleX(1);
@@ -144,6 +144,7 @@
                         50% {
                             transform: scaleX(0.8); 
                             background-color: #042122;
+                            color: $primary-header-text-color;
                             transform-origin: left;
                         }
                     }
@@ -164,8 +165,8 @@
         .main-container-button__btn{
 
             @include set-padding-background-color-color-and-border(15px 20px,$primary-header-background-color, $primary-header-text-color, none);
-            @include set-cursor-font-weight-font-size-and-border-radius(pointer,700,13px,30px);
-            font-family: 'Inter', sans-serif;
+            @include set-cursor-font-weight-font-size-and-border-radius(pointer,700,14px,30px);
+            font-family: 'Roboto Regular', sans-serif;
             margin-top: 30px;
             
 
